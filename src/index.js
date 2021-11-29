@@ -48,6 +48,8 @@ const linksArray = Array.from(navLinks);
 
 
 //header section//
+
+
 const services = linksArray[0];
 services.textContent = siteContent['nav']['nav-item-1']
 services.className = 'italic';
@@ -67,16 +69,16 @@ const contact = linksArray[5];
 contact.textContent = siteContent['nav']['nav-item-6']
 contact.className = 'italic';
 
-logoImg.src = 'mocks/img/logo.png';
+logoImg.src = siteContent['images']['logo-img'];
 
 const bigHeading = document.querySelector('h1');
-bigHeading.textContent = 'DOM IS AWESOME';
+bigHeading.textContent = siteContent['cta']['h1'];
 
 const ctaButton = document.querySelector('.cta button');
-ctaButton.textContent = 'Get Started';
+ctaButton.textContent = siteContent['cta']['button'];
 
 const ctaImg = document.querySelector('#cta-img');
-ctaImg.src = 'mocks/img/cta.png';
+ctaImg.src = siteContent['images']['cta-img'];
 //end of header section//
 
 
@@ -98,7 +100,7 @@ topSecondPara.textContent = siteContent['main-content']['about-content'];
 
 //middle content
 const middleImg = document.querySelector('#middle-img');
-middleImg.src = 'mocks/img/accent.png';
+middleImg.src = siteContent['images']['accent-img'];
 
 //bottom content
 const bottomHeaders = document.querySelectorAll('.bottom-content h4');
