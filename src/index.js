@@ -48,22 +48,81 @@ const linksArray = Array.from(navLinks);
 
 
 //header section//
-navLinks.className = 'italic';
-
 const services = linksArray[0];
-services.textContent = 'Services';
+services.textContent = siteContent['nav']['nav-item-1']
+services.className = 'italic';
 const product = linksArray[1];
-product.textContent = 'Product';
+product.textContent = siteContent['nav']['nav-item-2']
+product.className = 'italic';
 const vision = linksArray[2];
-vision.textContent = 'Vision';
+vision.textContent = siteContent['nav']['nav-item-3']
+vision.className = 'italic';
 const features = linksArray[3];
-features.textContent = 'Features';
+features.textContent = siteContent['nav']['nav-item-4']
+features.className = 'italic';
 const about = linksArray[4];
-about.textContent = 'About';
+about.textContent = siteContent['nav']['nav-item-5']
+about.className = 'italic';
 const contact = linksArray[5];
-contact.textContent = 'Contact';
+contact.textContent = siteContent['nav']['nav-item-6']
+contact.className = 'italic';
 
 logoImg.src = 'mocks/img/logo.png';
 
+const bigHeading = document.querySelector('h1');
+bigHeading.textContent = 'DOM IS AWESOME';
+
+const ctaButton = document.querySelector('.cta button');
+ctaButton.textContent = 'Get Started';
+
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = 'mocks/img/cta.png';
+//end of header section//
+
+
+//main content section//
+
+//top content
+const topHeaders = document.querySelectorAll('.top-content h4');
+const topParas = document.querySelectorAll('.top-content p');
+const topFirstHeader = topHeaders[0];
+const topSecondHeader = topHeaders[1];
+const topFirstPara = topParas[0];
+const topSecondPara = topParas[1];
+topFirstHeader.textContent = siteContent['main-content']['features-h4'];
+topSecondHeader.textContent = siteContent['main-content']['about-h4'];
+topFirstPara.textContent = siteContent['main-content']['features-content'];
+topSecondPara.textContent = siteContent['main-content']['about-content'];
+
+
+
+
+
+//middle content
+const middleImg = document.querySelector('#middle-img');
+middleImg.src = 'mocks/img/accent.png';
+
+//bottom content
+
+
+
+//contact section//
+const contactH4 = document.querySelector('.contact h4');
+const contactInfo = document.querySelectorAll('.contact p');
+
+const address = contactInfo[0];
+const phone = contactInfo[1];
+const email = contactInfo[2];
+
+contactH4.textContent = siteContent['contact']['contact-h4'];
+address.textContent = siteContent['contact']['address'];
+phone.textContent = siteContent['contact']['phone'];
+email.textContent = siteContent['contact']['email'];
+
+
+//footer section//
+const footerLink = document.querySelector('footer a');
+footerLink.textContent = 'Copyright Great Idea! 2021';
+footerLink.className = 'bold';
 
 
