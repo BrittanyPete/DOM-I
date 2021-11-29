@@ -96,13 +96,27 @@ topSecondPara.textContent = siteContent['main-content']['about-content'];
 
 
 
-
-
 //middle content
 const middleImg = document.querySelector('#middle-img');
 middleImg.src = 'mocks/img/accent.png';
 
 //bottom content
+const bottomHeaders = document.querySelectorAll('.bottom-content h4');
+const bottomParas = document.querySelectorAll('.bottom-content p');
+const firstBottomHeader = bottomHeaders[0];
+const secondBottomHeader = bottomHeaders[1];
+const thirdBottomHeader = bottomHeaders[2];
+const firstBottomPara = bottomParas[0];
+const secondBottomPara = bottomParas[1];
+const thirdBottomPara = bottomParas[2];
+
+firstBottomHeader.textContent = siteContent['main-content']['services-h4'];
+secondBottomHeader.textContent = siteContent['main-content']['product-h4'];
+thirdBottomHeader.textContent = siteContent['main-content']['vision-h4'];
+firstBottomPara.textContent = siteContent['main-content']['services-content'];
+secondBottomPara.textContent = siteContent['main-content']['product-content'];
+thirdBottomPara.textContent = siteContent['main-content']['vision-content'];
+
 
 
 
