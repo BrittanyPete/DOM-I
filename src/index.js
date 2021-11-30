@@ -33,10 +33,112 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "copyright": "Copyright Great Idea! 2021",
   },
   "images": {
-    "logo-img": "http://localhost:9000/img/logo.png",
-    "cta-img": "http://localhost:9000/img/cta.png",
-    "accent-img": "http://localhost:9000/img/accent.png",
+    "logo-img": "mocks/img/logo.png",
+    "cta-img": "mocks/img/cta.png",
+    "accent-img": "mocks/img/accent.png",
   },
 };
 
 console.log('project wired!')
+
+const header = document.querySelector('header');
+const navLinks = document.querySelectorAll('nav a');
+const logoImg = document.querySelector('#logo-img');
+const linksArray = Array.from(navLinks);
+
+
+//header section//
+
+
+const services = linksArray[0];
+services.textContent = siteContent['nav']['nav-item-1']
+services.className = 'italic';
+const product = linksArray[1];
+product.textContent = siteContent['nav']['nav-item-2']
+product.className = 'italic';
+const vision = linksArray[2];
+vision.textContent = siteContent['nav']['nav-item-3']
+vision.className = 'italic';
+const features = linksArray[3];
+features.textContent = siteContent['nav']['nav-item-4']
+features.className = 'italic';
+const about = linksArray[4];
+about.textContent = siteContent['nav']['nav-item-5']
+about.className = 'italic';
+const contact = linksArray[5];
+contact.textContent = siteContent['nav']['nav-item-6']
+contact.className = 'italic';
+
+logoImg.src = siteContent['images']['logo-img'];
+
+const bigHeading = document.querySelector('h1');
+bigHeading.textContent = siteContent['cta']['h1'];
+
+const ctaButton = document.querySelector('.cta button');
+ctaButton.textContent = siteContent['cta']['button'];
+
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent['images']['cta-img'];
+//end of header section//
+
+
+//main content section//
+
+//top content
+const topHeaders = document.querySelectorAll('.top-content h4');
+const topParas = document.querySelectorAll('.top-content p');
+const topFirstHeader = topHeaders[0];
+const topSecondHeader = topHeaders[1];
+const topFirstPara = topParas[0];
+const topSecondPara = topParas[1];
+topFirstHeader.textContent = siteContent['main-content']['features-h4'];
+topSecondHeader.textContent = siteContent['main-content']['about-h4'];
+topFirstPara.textContent = siteContent['main-content']['features-content'];
+topSecondPara.textContent = siteContent['main-content']['about-content'];
+
+
+
+//middle content
+const middleImg = document.querySelector('#middle-img');
+middleImg.src = siteContent['images']['accent-img'];
+
+//bottom content
+const bottomHeaders = document.querySelectorAll('.bottom-content h4');
+const bottomParas = document.querySelectorAll('.bottom-content p');
+const firstBottomHeader = bottomHeaders[0];
+const secondBottomHeader = bottomHeaders[1];
+const thirdBottomHeader = bottomHeaders[2];
+const firstBottomPara = bottomParas[0];
+const secondBottomPara = bottomParas[1];
+const thirdBottomPara = bottomParas[2];
+
+firstBottomHeader.textContent = siteContent['main-content']['services-h4'];
+secondBottomHeader.textContent = siteContent['main-content']['product-h4'];
+thirdBottomHeader.textContent = siteContent['main-content']['vision-h4'];
+firstBottomPara.textContent = siteContent['main-content']['services-content'];
+secondBottomPara.textContent = siteContent['main-content']['product-content'];
+thirdBottomPara.textContent = siteContent['main-content']['vision-content'];
+
+
+
+
+//contact section//
+const contactH4 = document.querySelector('.contact h4');
+const contactInfo = document.querySelectorAll('.contact p');
+
+const address = contactInfo[0];
+const phone = contactInfo[1];
+const email = contactInfo[2];
+
+contactH4.textContent = siteContent['contact']['contact-h4'];
+address.textContent = siteContent['contact']['address'];
+phone.textContent = siteContent['contact']['phone'];
+email.textContent = siteContent['contact']['email'];
+
+
+//footer section//
+const footerLink = document.querySelector('footer a');
+footerLink.textContent = 'Copyright Great Idea! 2021';
+footerLink.className = 'bold';
+
+
